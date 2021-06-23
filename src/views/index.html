@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Github Repositories</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/documentation">Swagger</a>
+        <div class="search-container">
+            <form action="/v1/search/repositories">
+                <input type="text" placeholder="Search.." name="keyword" />
+                <input name="page" value="1" hidden />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <h1>Github Repositories Finder</h1>
+</body>
+
+</html>
