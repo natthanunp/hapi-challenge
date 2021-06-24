@@ -42,10 +42,11 @@ const parent_child_mapping = (data, id_mapping) => {
     // Handle the root element
     if (element.parent_id === null) {
       result = element
+
       return
     }
     const parent_element = data[id_mapping[element.parent_id]]
-    parent_element.children = [...(parent_element.children || []), element]
+    parent_element.children = [...(parent_element.children), element]
   })
 
   return result

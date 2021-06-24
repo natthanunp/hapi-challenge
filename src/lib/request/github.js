@@ -9,7 +9,7 @@ let request = axios.create({
 })
 
 const instance = () => {
-  request.defaults.baseURL = `https://api.github.com/`
+  request.defaults.baseURL = 'https://api.github.com/'
 
   return request
 }

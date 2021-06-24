@@ -39,7 +39,7 @@ const init = async () => {
   server.route({
     method: 'GET',
     path: '/health',
-    handler: (request, h) => {
+    handler: () => {
       return 'Hello World!'
     },
   })

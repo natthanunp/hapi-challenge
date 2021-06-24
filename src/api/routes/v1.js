@@ -9,7 +9,7 @@ const json_transformer_controller = require('../../controllers/json_transformer_
 const v1 = {
   name: 'v1',
   version: '1.0.0',
-  register: async function (server, options) {
+  register: async function (server) {
     //Styles
     server.route({
       method: 'GET',
@@ -25,7 +25,7 @@ const v1 = {
     server.route({
       method: 'GET',
       path: '/v1/home',
-      handler: async (request, h) => {
+      handler: async (h) => {
         return h.view('index')
       },
     })
@@ -55,7 +55,7 @@ const v1 = {
     server.route({
       method: 'POST',
       path: '/v1/transform',
-      handler: (request, h) => {
+      handler: (request) => {
         return json_transformer_controller(request.payload)
       },
       options: {
@@ -65,5 +65,5 @@ const v1 = {
     })
   },
 }
-
+console.log(v1.register)
 module.exports = v1
