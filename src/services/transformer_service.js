@@ -37,11 +37,11 @@ const extract_elements_from_object = (input) => {
  *  @returns {object} result
  */
 const parent_child_mapping = (data, id_mapping) => {
-  let result
+  const result = []
   data.forEach((element) => {
     // Handle the root element
     if (element.parent_id === null) {
-      result = element
+      result.push(element)
 
       return
     }
