@@ -46,7 +46,9 @@ const parent_child_mapping = (data, id_mapping) => {
       return
     }
     const parent_element = data[id_mapping[element.parent_id]]
-    parent_element.children = [...(parent_element.children), element]
+    if (parent_element && parent_element.children) {
+      parent_element.children = [...parent_element.children, element]
+    }
   })
 
   return result
